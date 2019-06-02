@@ -28,7 +28,7 @@ This repository contains two examples.
 This program waits for the user to input a suqare and returns its suqare root with the given precision.
 
 ```
-cargo run -p heron_cli
+cargo run --example cli
 
 square:
 25     
@@ -48,7 +48,7 @@ The same principle applies to the second example, which works in the browser.
 [`cargo-web`][cargo-web] might be used to build and run it:
 
 ```
-cargo web deploy -p heron_web
+cargo web deploy --example web
 ```
 
 [build-img]: https://travis-ci.com/flyingP0tat0/heron.svg?branch=master

@@ -34,17 +34,19 @@ jobs:
         - rustup target add wasm32-unknown-unknown
         - .travis/install-cargo-web.sh
       script:
-        - cargo doc -p heron --no-deps --release
-        - cargo web build -p heron_web --release
+        - cargo doc --no-deps --release
+        - cargo web build --example web --release
         - mv target/doc dist
         - mkdir dist/demo
-        - mv target/wasm32-unknown-unknown/release/heron_web.{js,wasm} dist/demo
-        - cp heron_web/static/index.html dist/demo
+        - mv target/wasm32-unknown-unknown/release/examples/web.{js,wasm} dist/demo
+        - cp examples/web/static/index.html dist/demo
+        - cp examples/web/static/style.css dist/demo
       deploy:
         provider: pages
         local-dir: dist
         skip-cleanup: true
         github-token: $GITHUB_TOKEN
-        committer_from_gh: true
+        name: flyingB0tat0
+        email: bot@baudisch.xyz
         keep-history: false
         allow-empty-commit: true
