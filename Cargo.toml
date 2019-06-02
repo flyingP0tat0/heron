@@ -1,0 +1,10 @@
+[workspace]
+members = [
+    "heron",
+    "heron_cli",
+    "heron_web"
+]
+
+[profile.release]
+codegen-units = 1
+lto = true

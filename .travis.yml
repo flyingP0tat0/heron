@@ -1,0 +1,50 @@
+language: rust
+
+rust:
+  - stable
+  - beta
+  - nightly
+
+cache: cargo
+
+jobs:
+  include:
+    - stage: lint
+      rust: stable
+      cache: cargo
+      install:
+        - rustup component add clippy
+      script:
+        - cargo clippy --all -- --deny clippy::all
+
+    - stage: format
+      rust: nightly
+      install:
+        - rustup component add rustfmt || cargo install --git https://github.com/rust-lang/rustfmt --force --bin rustfmt
+      script:
+        - cargo fmt --all -- --check
+
+    - stage: deploy
+      branches:
+        only:
+          - master
+      rust: stable
+      cache: cargo
+      install:
+        - rustup target add wasm32-unknown-unknown
+        - .travis/install-cargo-web.sh
+      script:
+        - cargo doc -p heron --no-deps --release
+        - cargo web build -p heron_web --release
+        - mv target/doc dist
+        - mkdir dist/demo
+        - mv target/wasm32-unknown-unknown/release/heron_web.{js,wasm} dist/demo
+        - cp heron_web/static/index.html dist/demo
+      deploy:
+        provider: pages
+        local-dir: dist
+        skip-cleanup: true
+        github-token: $GITHUB_TOKEN
+        committer_from_gh: true
+        keep-history: false
+        allow-empty-commit: true
