@@ -1,6 +1,7 @@
 //! # [Heron's method](https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method) implmentation
 //!
 //! Heron's method is a way of approximating the square root of a number.
+//!
 //! ## Example
 //!
 //! ```
