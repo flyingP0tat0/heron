@@ -5,7 +5,17 @@ rust:
   - beta
   - nightly
 
+install:
+  - rustup target add wasm32-unknown-unknown
+  - .travis/install-cargo-web.sh
+
 cache: cargo
+
+script:
+  - cargo build --verbose --all
+  - cargo test --verbose --lib
+  - cargo test --verbose --example cli
+  - cargo web build --verbose --example web
 
 jobs:
   include:
