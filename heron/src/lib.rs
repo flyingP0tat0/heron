@@ -1,14 +1,16 @@
-///! # heron - [Heron's method][https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method] implmentation
-///!
-///! # Example
-///! ```
-///! use heron::heron;
-///! let square = 25.0;
-///! let precision = 0.00001;
-///!
-///! assert_eq!(heron(square, precision), 5.0);
-///! ```
-///!
+//! # [Heron's method](https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method) implmentation
+//!
+//! Heron's method is a way of approximating the square root of a number.
+//! ## Example
+//!
+//! ```
+//! use heron::heron;
+//! let square = 25.0;
+//! let precision = 0.00001;
+//!
+//! assert_eq!(heron(square, precision), 5.0);
+//! ```
+//!
 
 /// Approximates the square root of the given number until it reaches the given precision.
 pub fn heron(square: f32, precision: f32) -> f32 {

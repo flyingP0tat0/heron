@@ -1,0 +1,13 @@
+[package]
+name = "heron_web"
+version = "0.1.0"
+description = "A library implementing Heron's method to find a square root."
+authors = ["Jan Baudisch <dev@baudisch.xyz>"]
+license = "GPL-3.0-or-later"
+readme = "../README.md"
+edition = "2018"
+workspace = ".."
+
+[dependencies]
+heron = { path = "../heron" }
+yew = "0.6"

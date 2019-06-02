@@ -45,10 +45,10 @@ See [here][demo-url] for a live version.
 
 The same principle applies to the second example, which works in the browser.
 
-[`cargo-web`][cargo-web] might be used to build and run it:
+[`cargo-web`][cargo-web] might be used to build it:
 
 ```
-cargo web deploy --example web
+cargo web start -p heron_web
 ```
 
 [build-img]: https://travis-ci.com/flyingP0tat0/heron.svg?branch=master
