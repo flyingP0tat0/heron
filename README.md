@@ -51,11 +51,11 @@ The same principle applies to the second example, which works in the browser.
 cargo web start -p heron_web
 ```
 
-[build-img]: https://travis-ci.com/flyingP0tat0/heron.svg?branch=master
-[build-url]: https://travis-ci.com/flyingP0tat0/heron
+[build-img]: https://travis-ci.com/janbaudisch/heron.svg?branch=master
+[build-url]: https://travis-ci.com/janbaudisch/heron
 [docs-img]: https://img.shields.io/badge/docs-master-blue.svg?colorB=4d76ae
-[docs-url]: https://flyingP0tat0.xyz/heron/heron
+[docs-url]: https://janbaudisch.dev/heron/heron
 [demo-img]: https://img.shields.io/badge/demo-live-green.svg
-[demo-url]: https://flyingp0tat0.xyz/heron/demo
+[demo-url]: https://janbaudisch.dev/heron/demo
 [wikipedia-heron]: https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method
 [cargo-web]: https://github.com/koute/cargo-web
