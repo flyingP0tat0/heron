@@ -29,7 +29,6 @@ jobs:
         only:
           - master
       rust: stable
-      cache: cargo
       install:
         - rustup target add wasm32-unknown-unknown
         - .travis/install-cargo-web.sh
