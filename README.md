@@ -54,8 +54,8 @@ cargo web start -p heron_web
 [build-img]: https://travis-ci.com/janbaudisch/heron.svg?branch=master
 [build-url]: https://travis-ci.com/janbaudisch/heron
 [docs-img]: https://img.shields.io/badge/docs-master-blue.svg?colorB=4d76ae
-[docs-url]: https://janbaudisch.dev/heron/heron
+[docs-url]: https://heron.janbaudisch.dev/heron
 [demo-img]: https://img.shields.io/badge/demo-live-green.svg
-[demo-url]: https://janbaudisch.dev/heron/demo
+[demo-url]: https://heron.janbaudisch.dev/demo
 [wikipedia-heron]: https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method
 [cargo-web]: https://github.com/koute/cargo-web

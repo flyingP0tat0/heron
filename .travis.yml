@@ -41,6 +41,7 @@ jobs:
         - mv target/wasm32-unknown-unknown/release/heron_web.{js,wasm} dist/demo
         - cp heron_web/static/index.html dist/demo
         - cp heron_web/static/style.css dist/demo
+        - cp .travis/CNAME dist/CNAME
       deploy:
         provider: pages
         local-dir: dist
