@@ -1,4 +1,4 @@
-#![recursion_limit="512"]
+#![recursion_limit = "512"]
 
 use heron::heron;
 use yew::{html, Component, ComponentLink, Html, Renderable, ShouldRender};
