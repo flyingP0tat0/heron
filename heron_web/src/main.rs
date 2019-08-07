@@ -1,3 +1,5 @@
+#![recursion_limit = "512"]
+
 use heron::heron;
 use yew::{html, Component, ComponentLink, Html, Renderable, ShouldRender};
 
@@ -53,11 +55,11 @@ impl Renderable<Model> for Model {
     fn view(&self) -> Html<Self> {
         html! {
             <div>
-                <input value=&self.square, oninput=|event| Message::Input(Input::Square, event.value), placeholder="square",></input>
+                <input value=&self.square oninput=|event| Message::Input(Input::Square, event.value) placeholder="square"></input>
                 <br></br>
-                <input value=&self.precision, oninput=|event| Message::Input(Input::Precision, event.value), placeholder="precision",></input>
+                <input value=&self.precision oninput=|event| Message::Input(Input::Precision, event.value) placeholder="precision"></input>
                 <br></br>
-                <button onclick=|_| Message::Calculcate,>{ "calculcate" }</button>
+                <button onclick=|_| Message::Calculcate>{ "calculcate" }</button>
                 <br></br>
                 <p>{ "square root: " }<b>{ &self.root }</b></p>
             </div>
