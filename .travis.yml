@@ -18,9 +18,9 @@ jobs:
         - cargo clippy --all -- --deny clippy::all
 
     - stage: format
-      rust: nightly
+      rust: stable
       install:
-        - rustup component add rustfmt || cargo install --git https://github.com/rust-lang/rustfmt.git --force --bin rustfmt
+        - rustup component add rustfmt
       script:
         - cargo fmt --all -- --check
 
@@ -31,7 +31,7 @@ jobs:
       rust: stable
       install:
         - rustup target add wasm32-unknown-unknown
-        - .travis/install-cargo-web.sh
+        - bash <(curl https://gist.githubusercontent.com/janbaudisch/8074416b864dc357145e649449acb42d/raw/74f6c3d3bdca8b41fd0617e8992c078aec80966d/install-cargo-web.sh)
       script:
         - cargo doc -p heron --no-deps --release
         - cargo web build -p heron_web --release
