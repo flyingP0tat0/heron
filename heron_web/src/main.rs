@@ -10,17 +10,17 @@ fn main() {
 pub struct Model {
     square: String,
     precision: String,
-    root: f32
+    root: f32,
 }
 
 pub enum Message {
     Calculcate,
-    Input(Input, String)
+    Input(Input, String),
 }
 
 pub enum Input {
     Square,
-    Precision
+    Precision,
 }
 
 impl Component for Model {
@@ -31,7 +31,7 @@ impl Component for Model {
         Model {
             square: String::new(),
             precision: String::new(),
-            root: 0.0
+            root: 0.0,
         }
     }
 
@@ -44,8 +44,8 @@ impl Component for Model {
             }
             Message::Input(input_type, input) => match input_type {
                 Input::Square => self.square = input,
-                Input::Precision => self.precision = input
-            }
+                Input::Precision => self.precision = input,
+            },
         }
         true
     }
