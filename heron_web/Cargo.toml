@@ -10,4 +10,4 @@ workspace = ".."
 
 [dependencies]
 heron = { path = "../heron" }
-yew = "0.10"
+yew = "0.12"
